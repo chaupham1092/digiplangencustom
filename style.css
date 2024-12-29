@@ -100,3 +100,48 @@ canvas {
     height: auto !important;
     max-height: 250px; /* Ensure all charts have the same height */
 }
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .input-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .charts-container {
+        flex-direction: column;
+    }
+
+    .chart {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #media-plan-table {
+        font-size: 12px;
+    }
+
+    #media-plan-table th, #media-plan-table td {
+        padding: 5px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* General mobile-friendly adjustments */
+canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px;
+}
