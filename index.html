@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Media Plan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Your Marketing Channel Info</h1>
+        <div id="input-section" class="input-section">
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Marketing Channel</label>
+                    <input type="text" placeholder="Enter your channel name" class="channel-input">
+                </div>
+                <div class="input-group">
+                    <label>CTR</label>
+                    <input type="text" placeholder="Your CTR" class="ctr-input">
+                </div>
+                <div class="input-group">
+                    <label>CPC</label>
+                    <input type="text" placeholder="Your CPC" class="cpc-input">
+                </div>
+                <div class="input-group">
+                    <label>Conversion Rate</label>
+                    <input type="text" placeholder="Your Conv Rate" class="conv-rate-input">
+                </div>
+                <div class="input-group">
+                    <label>Media Budget</label>
+                    <input type="text" placeholder="Media Cost" class="media-budget-input">
+                </div>
+            </div>
+        </div>
+        <button id="add-channel-btn" class="btn">Add More Marketing Channel</button>
+        <button id="reset-channels-btn" class="btn">Reset All Added Values</button>
+        <button id="remove-channels-btn" class="btn" style="background-color: red;">Remove All Added Channels</button>
+        
+        <h2>Charts</h2>
+        <div class="charts-container">
+            <div class="chart">
+                <h3>Pie Chart</h3>
+                <canvas id="pie-chart"></canvas>
+            </div>
+            <div class="chart">
+                <h3>Combo Chart (Impressions vs Clicks)</h3>
+                <canvas id="combo-chart"></canvas>
+            </div>
+            <div class="chart">
+                <h3>Combo Chart (Conversions vs Cost)</h3>
+                <canvas id="conversions-cost-chart"></canvas>
+            </div>
+        </div>
+        <h2>Media Plan Table</h2>
+        <table id="media-plan-table">
+            <thead>
+                <tr>
+                    <th>Marketing Channel</th>
+                    <th>Impressions</th>
+                    <th>Clicks</th>
+                    <th>CTR</th>
+                    <th>CPC</th>
+                    <th>CPM</th>
+                    <th>Conversions</th>
+                    <th>Cost/Conv</th>
+                    <th>Conv Rate</th>
+                    <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
