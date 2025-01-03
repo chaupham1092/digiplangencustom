@@ -19,11 +19,19 @@ function handleInput(e) {
     const [channel, ctr, cpc, convRate, budget] = inputs.map(input => input.value.trim());
 
     const index = [...document.getElementById('input-section').children].indexOf(targetRow);
+
+    // Normalize percentage values
+    const normalizePercentage = value => {
+        if (!value) return 0;
+        const cleanValue = parseFloat(value.replace('%', ''));
+        return isNaN(cleanValue) ? 0 : cleanValue / 100;
+    };
+
     channels[index] = {
         channel: channel || `Channel ${index + 1}`,
-        ctr: parseFloat(ctr.replace('%', '')) / (ctr.includes('%') ? 100 : 1) || 0,
+        ctr: normalizePercentage(ctr),
         cpc: parseFloat(cpc.replace('$', '').replace(',', '')) || 0,
-        convRate: parseFloat(convRate.replace('%', '')) / (convRate.includes('%') ? 100 : 1) || 0,
+        convRate: normalizePercentage(convRate),
         budget: parseFloat(budget.replace('$', '').replace(',', '')) || 0,
     };
 
